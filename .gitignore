@@ -1,0 +1,3 @@
+valkey/replication/primary/data
+valkey/replication/replica1/data
+valkey/replication/replica2/data
