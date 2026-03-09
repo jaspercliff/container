@@ -3,7 +3,7 @@ networks:
     driver: bridge
 services:
   valkey-1: &valkey-base
-    image: docker.io/valkey/valke:9.0.3
+    image: valkey/valkey:9.0.3
     command: ["valkey-server", "/usr/local/etc/valkey/valkey.conf"]
     networks:
       - valkey-net
@@ -13,6 +13,7 @@ services:
       - ./data/node-1:/data
     ports:
       - "6380:6379"
+      - "16380:16380"
   valkey-2:
     <<: *valkey-base
     container_name: valkey-2 
@@ -21,6 +22,7 @@ services:
       - ./data/node-2:/data
     ports:
       - "6381:6379"
+      - "16381:16380"
   valkey-3:
     <<: *valkey-base
     container_name: valkey-3 
@@ -29,6 +31,7 @@ services:
       - ./data/node-3:/data
     ports:
       - "6382:6379"
+      - "16382:16380"
   valkey-4:
     <<: *valkey-base
     container_name: valkey-4
@@ -37,6 +40,7 @@ services:
       - ./data/node-4:/data
     ports:
       - "6383:6379"
+      - "16383:16380"
   valkey-5:
     <<: *valkey-base
     container_name: valkey-5
@@ -45,6 +49,7 @@ services:
       - ./data/node-5:/data
     ports:
       - "6384:6379"
+      - "16384:16380"
   valkey-6:
     <<: *valkey-base
     container_name: valkey-6
@@ -53,3 +58,4 @@ services:
       - ./data/node-6:/data
     ports:
       - "6385:6379"
+      - "16385:16380"
