@@ -1,4 +1,5 @@
-valkey-cli -a passwd --cluster create \
+# create cluster
+valkey-cli --cluster create \
     192.168.31.36:6380 192.168.31.36:6381 192.168.31.36:6382 \
     192.168.31.36:6383 192.168.31.36:6384 192.168.31.36:6385 \
     --cluster-replicas 1
