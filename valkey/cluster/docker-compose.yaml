@@ -13,7 +13,7 @@ services:
       - ./data/node-1:/data
     ports:
       - "6380:6379"
-      - "16380:16380"
+      - "16380:16379"
   valkey-2:
     <<: *valkey-base
     container_name: valkey-2 
@@ -22,7 +22,7 @@ services:
       - ./data/node-2:/data
     ports:
       - "6381:6379"
-      - "16381:16380"
+      - "16381:16379"
   valkey-3:
     <<: *valkey-base
     container_name: valkey-3 
@@ -31,7 +31,7 @@ services:
       - ./data/node-3:/data
     ports:
       - "6382:6379"
-      - "16382:16380"
+      - "16382:16379"
   valkey-4:
     <<: *valkey-base
     container_name: valkey-4
@@ -40,7 +40,7 @@ services:
       - ./data/node-4:/data
     ports:
       - "6383:6379"
-      - "16383:16380"
+      - "16383:16379"
   valkey-5:
     <<: *valkey-base
     container_name: valkey-5
@@ -49,7 +49,7 @@ services:
       - ./data/node-5:/data
     ports:
       - "6384:6379"
-      - "16384:16380"
+      - "16384:16379"
   valkey-6:
     <<: *valkey-base
     container_name: valkey-6
@@ -58,4 +58,4 @@ services:
       - ./data/node-6:/data
     ports:
       - "6385:6379"
-      - "16385:16380"
+      - "16385:16379"
