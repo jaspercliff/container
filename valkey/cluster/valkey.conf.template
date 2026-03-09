@@ -1,0 +1,19 @@
+# 所有人可以连接
+bind 0.0.0.0
+# password
+requirepass passwd
+# aof
+appendonly yes
+
+cluster-enabled yes
+# 不需要用户维护
+cluster-config-file nodes-6379.conf
+# 节点心跳失败时间
+cluster-node-timeout 15000
+
+################## container config ##################
+
+cluster-announce-ip  192.168.31.36
+cluster-announce-port ${PORT}
+# 集群之间通信端口
+cluster-announce-bus-port ${BPORT}
