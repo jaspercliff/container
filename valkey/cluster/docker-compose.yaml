@@ -59,22 +59,22 @@ services:
     ports:
       - "6385:6379"
       - "16385:16379"
-  valkey-7:
-    <<: *valkey-base
-    container_name: valkey-7
-    volumes:
-      - ./conf/node-7:/usr/local/etc/valkey
-      - ./data/node-7:/data
-    ports:
-      - "6386:6379"
-      - "16386:16379"
-  valkey-8:
-    <<: *valkey-base
-    container_name: valkey-8
-    volumes:
-      - ./conf/node-8:/usr/local/etc/valkey
-      - ./data/node-8:/data
-    ports:
-      - "6387:6379"
-      - "16387:16379"
+  # valkey-7:
+  #   <<: *valkey-base
+  #   container_name: valkey-7
+  #   volumes:
+  #     - ./conf/node-7:/usr/local/etc/valkey
+  #     - ./data/node-7:/data
+  #   ports:
+  #     - "6386:6379"
+  #     - "16386:16379"
+  # valkey-8:
+  #   <<: *valkey-base
+  #   container_name: valkey-8
+  #   volumes:
+  #     - ./conf/node-8:/usr/local/etc/valkey
+  #     - ./data/node-8:/data
+  #   ports:
+  #     - "6387:6379"
+  #     - "16387:16379"
 
