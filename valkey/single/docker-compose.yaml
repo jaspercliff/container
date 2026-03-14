@@ -1,0 +1,15 @@
+services:
+  valkey-single:
+    image: docker.io/valkey/valkey:9.0.3
+    container_name: valkey-single
+    command: ["valkey-server", "/usr/local/etc/valkey/valkey.conf"]
+    volumes:
+      - ./conf/valkey.conf:/usr/local/etc/valkey/valkey.conf
+      - ./primary/data:/data
+    ports:
+      - "6380:6379"
+    networks:
+      - valkey-net
+networks:
+  valkey-net:
+    driver: bridge

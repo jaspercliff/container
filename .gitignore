@@ -3,3 +3,4 @@ valkey/replication/replica1/data
 valkey/replication/replica2/data
 valkey/sentinel/data
 /valkey/cluster/data
+/valkey/single/primary/data
